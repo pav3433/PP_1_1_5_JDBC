@@ -10,7 +10,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        UserService userService = UserServiceImpl.getInstance();
+        UserServiceImpl userService = new UserServiceImpl();
         userService.createUsersTable();
 
         List<User> userList = new ArrayList<>();
@@ -29,7 +29,6 @@ public class Main {
         userService.cleanUsersTable();
         userService.dropUsersTable();
 
-        UserDaoJDBCImpl.getInstance().closeConnection();
     }
 }
 
