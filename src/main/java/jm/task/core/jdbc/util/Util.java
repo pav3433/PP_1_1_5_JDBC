@@ -25,8 +25,10 @@ public class Util {
     private static final String DIALECT = "org.hibernate.dialect.PostgreSQL9Dialect";
     private static SessionFactory sessionFactory;
 
+
     public Util() {
     }
+
 
     public static SessionFactory getSessionFactory() {
 
